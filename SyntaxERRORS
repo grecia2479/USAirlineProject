@@ -88,13 +88,9 @@ app.layout = html.Div(children=[html.H1(# TASK1: Add title to the dashboard
                                             ]
                                         ),
                                         # TASK2: Add a dropdown
-                                        dcc.Dropdown(id='input-type', 
-                   options=[
-                           {'label': 'Yearly Airline Performance Report', 'value': 'OPT1'},
-                           {'label': 'Yearly Airline Delay Report', 'value': 'OPT2'}
-                           ],
-                  placeholder='Select a report type',
-                  style={'set width': '80%', 'padding': '3px', 'font-size': 20, 'textAlign': 'center'})
+                                        dcc.Dropdown(id='input-type', options=[{'label': 'Yearly Airline Performance Report', 'value': 'OPT1'}, {'label': 'Yearly Airline Delay Report', 'value': 'OPT2'},],
+                                        placeholder='Select a report type',),
+                                        style={'set width': '80%', 'padding': '3px', 'font-size': 20, 'textAlign': 'center'})
                                         # Enter your code below. Make sure you have correct formatting.
                                         
                                     # Place them next to each other using the division style
@@ -141,7 +137,7 @@ app.layout = html.Div(children=[html.H1(# TASK1: Add title to the dashboard
                 Output(component_id='plot2', component_property='children'),
                 Output(component_id='plot3', component_property='children'),
                 Output(component_id='plot4', component_property='children'),
-                Output(component_id='plot5', component_property='children'),
+                Output(component_id='plot5', component_property='children')
                 ],
                [Input(component_id='input-type', component_property='value'),
                 Input(component_id='input-year', component_property='value')
